@@ -1,0 +1,9 @@
+$link_color: #369;
+
+a {
+	color: $link_color;
+}
+
+a:hover {
+	color: lighten( $link_color, 10% );
+}
