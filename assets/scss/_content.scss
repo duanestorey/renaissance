@@ -13,9 +13,30 @@ body {
 /*  Main Content Styles */
 
 .main.wrap {
-	max-width: 900px;
+	max-width: 1000px;
 	margin: auto;
 	text-align: left;
+
+	.post.archive {
+		img {
+			float: left;
+			margin-right: 20px;
+		}
+	}
+
+	img {
+		max-width: 1000px;
+		height: auto;
+	}
+}
+
+article.post  {
+	clear: both;
+	margin-bottom: 70px;
+}
+
+article.single {
+	margin-top: 100px;
 }
 
 /* Footer Styles */

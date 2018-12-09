@@ -5,11 +5,15 @@
 		while ( have_posts() ) {
 			the_post();
 
-			get_template_part( 'template-parts/content', 'header' );
+			if ( is_home() || is_archive() || is_category() || is_tag() || is_tax() ) {
+				get_template_part( 'template-parts/content-header', 'archive' );
+				get_template_part( 'template-parts/content-body', 'archive' );
+			} else {
+				get_template_part( 'template-parts/content-header', 'single' );
+				get_template_part( 'template-parts/content-body', 'single' );	
+			}
 
-			get_template_part( 'template-parts/content', 'body' );
-
-			get_template_part( 'template-parts/content', 'footer' );
+			get_template_part( 'template-parts/content-footer', 'single' );
 		}
 	} else {
 		// page not found
