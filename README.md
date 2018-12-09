@@ -1,2 +1,2 @@
-# renaissance
+# Renaissance
 WordPress starter theme
